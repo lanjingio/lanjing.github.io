@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/template-web.js"></script>
+    <script src="js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <title>测试</title>
+</head>
+<body>
+<div class="top">
+    <div class="logo" id="logo">192.168.11.21:10086</div>
+</div>
+<div id="main" class="testBox">
+    <div class="left">
+        <div class="icon">
+            <img src="img/icon.png" alt="">
+        </div>
+        <h1>by:兰靖</h1>
+        <p>“青春是一场谎言，一种罪恶。讴歌青春的家伙们，往往都会欺骗自己和周围的人，并且以肯定的态度对待一切环境。只要高举“青春”这两个字，无论如何稀松平常的解释还是社会观念，他们都能曲解，对他们而言，谎言、秘密、罪恶、甚至失败，都不只不过是青春的调味剂罢了。假若失败是青春的象征，交友失败的人却被遗忘在青春的正中间不是很奇怪吗？然而，他们不会承认吧！他们会把一切都想有利于自己的方向解释。我的结论就是——享受青春的笨蛋们，全都给我爆炸吧。”
+        </p>
+    </div>
+    <div class="right" id="info">
+        <p class="title">留言板<a href="#" class="sayNote" data-toggle="modal" data-target="#myModal" ><i class="glyphicon glyphicon-pencil"></i> 写留言</a></p>
+        <ul class="list">
+            <li>
+                <div class="usrIcon">
+                    <img src="img/02.jpg" alt="">
+                </div>
+                <div class="usrText">
+                    <h3>这是一个测试</h3>
+                    <p>这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试</p>
+                </div>
+            </li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Button trigger modal-->
+<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+    Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">请问阁下是？</label>
+                        <input type="text" class="form-control" name="userName" id="exampleInputEmail1" placeholder="昵称">
+                    </div>
+                    <div class="form-group">
+                        <label for="form-control">留言：</label>
+                        <textarea class="form-control" name="userMsg" style="resize: none;" id="form-control" rows="5" placeholder="……"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-primary">发布</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script id="template" type="text/html">
+    {{each v}}
+    <li>
+        <div class="usrIcon">
+            <img src="img/02.jpg" alt="">
+        </div>
+        <div class="usrText">
+            <h3>这是一个测试</h3>
+            <p>这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试</p>
+        </div>
+    </li>
+    {{/each}}
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
