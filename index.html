@@ -28,25 +28,25 @@
     <div class="right" id="info">
         <p class="title">留言板<a href="#" class="sayNote" data-toggle="modal" data-target="#myModal" ><i class="glyphicon glyphicon-pencil"></i> 写留言</a></p>
         <ul class="list">
-            <li>
-                <div class="usrIcon">
-                    <img src="img/02.jpg" alt="">
-                </div>
-                <div class="usrText">
-                    <h3>这是一个测试</h3>
-                    <p>这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试</p>
-                </div>
-            </li>
-            <li></li>
-            <li></li>
+<!--            <li>-->
+<!--                <div class="usrIcon">-->
+<!--                    <img src="img/02.jpg" alt="">-->
+<!--                </div>-->
+<!--                <div class="usrText">-->
+<!--                    <h3>这是一个测试</h3>-->
+<!--                    <p>这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试</p>-->
+<!--                </div>-->
+<!--            </li>-->
+<!--            <li></li>-->
+<!--            <li></li>-->
         </ul>
     </div>
 </div>
 
 <!-- Button trigger modal-->
-<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-    Launch demo modal
-</button>
+<!--<button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">-->
+<!--    Launch demo modal-->
+<!--</button>-->
 
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
@@ -60,31 +60,35 @@
                 <form>
                     <div class="form-group">
                         <label for="exampleInputEmail1">请问阁下是？</label>
-                        <input type="text" class="form-control" name="userName" id="exampleInputEmail1" placeholder="昵称">
+                        <input type="text" class="form-control" name="name" id="exampleInputEmail1" placeholder="昵称">
                     </div>
                     <div class="form-group">
                         <label for="form-control">留言：</label>
-                        <textarea class="form-control" name="userMsg" style="resize: none;" id="form-control" rows="5" placeholder="……"></textarea>
+                        <textarea class="form-control" name="msg" style="resize: none;" id="form-control" rows="5" placeholder="……"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">选择头像</label>
+                        <input type="file" name="icon" id="exampleInputFile">
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                <button type="button" class="btn btn-primary">发布</button>
+                <button type="button" class="btn btn-primary" id="submit">发布</button>
             </div>
         </div>
     </div>
 </div>
 
 <script id="template" type="text/html">
-    {{each v}}
+    {{each msg v}}
     <li>
         <div class="usrIcon">
-            <img src="img/02.jpg" alt="">
+            <img src="{{v.icon}}" alt="">
         </div>
         <div class="usrText">
-            <h3>这是一个测试</h3>
-            <p>这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试这是一个测试</p>
+            <h3>{{v.name}}</h3>
+            <p>{{v.msg}}</p>
         </div>
     </li>
     {{/each}}
